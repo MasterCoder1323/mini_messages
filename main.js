@@ -1,6 +1,6 @@
 // Import the functions you need from the SDKs you need
-import { initializeApp } from "firebase/app";
-import { getDatabase, ref, set, child, get } from "firebase/database";
+import { initializeApp } from "https://www.gstatic.com/firebasejs/7.6.2/firebase-app.js";
+import { getDatabase, ref, set, child, get } from "https://www.gstatic.com/firebasejs/live/3.1/firebase.js";
 // TODO: Add SDKs for Firebase products that you want to use
 // https://firebase.google.com/docs/web/setup#available-libraries
 
