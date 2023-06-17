@@ -47,8 +47,11 @@ function addUser() {
 			window.location = "index.html";
 		}
 	} else {
-		writeDBValue(users, {
-			
+		writeDBValue("users" + userName , {
+			password: userPassword,
+			rooms: null
 		});
+		localStorage.setItem("user", userName);
+		window.location = "index.html";
 	}
 }
