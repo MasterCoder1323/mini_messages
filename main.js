@@ -1,11 +1,6 @@
-// Import the functions you need from the SDKs you need
+// Firebase Setup
 import { initializeApp } from "https://www.gstatic.com/firebasejs/7.6.2/firebase-app.js";
 import { getDatabase, ref, set, child, get } from "https://www.gstatic.com/firebasejs/live/3.1/firebase.js";
-// TODO: Add SDKs for Firebase products that you want to use
-// https://firebase.google.com/docs/web/setup#available-libraries
-
-// Your web app's Firebase configuration
-// For Firebase JS SDK v7.20.0 and later, measurementId is optional
 const firebaseConfig = {
   apiKey: "AIzaSyCJUZeFgz86pbcJSyAg01le-Ll5TATFWbQ",
   authDomain: "messaging-3e144.firebaseapp.com",
@@ -16,12 +11,8 @@ const firebaseConfig = {
   appId: "1:1067401953961:web:cca14542d6e7697df19fb8",
   measurementId: "G-JFW1T0KYQ8"
 };
-
-// Initialize Firebase
 const app = initializeApp(firebaseConfig);
 const db = getDatabase(app);
-
-//Firebase Functions
 function getDBValue(key) {
 	let value = get(child(dbRef, key)).then((snapshot) => {
 		if (snapshot.exists()) {
@@ -32,10 +23,12 @@ function getDBValue(key) {
 	}).catch((error) => {console.error(error);});
 	return value;
 }
-
 function writeDBValue(folder, json) {
 	set(ref(db, folder), json);
 }
+
+
+
 
 //Login
 function addUser() {
