@@ -21,7 +21,7 @@ function addUser() {
 			window.location = "index.html";
 		}
 	} else {
-		writeDBValue("users" + userName , {
+		jFirebase.write(init, "users" + userName , {
 			password: userPassword,
 			rooms: null
 		});
