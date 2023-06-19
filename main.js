@@ -1,5 +1,5 @@
 // Firebase Setup
-import jFirebase from "https://cdn.skypack.dev/jlsfirebase";
+const jFirebase = require("https://cdn.skypack.dev/jlsfirebase");
 const jConf = {
 	apiKey: "AIzaSyCJUZeFgz86pbcJSyAg01le-Ll5TATFWbQ",
 	authDomain: "messaging-3e144.firebaseapp.com",
