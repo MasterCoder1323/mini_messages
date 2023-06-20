@@ -1,4 +1,5 @@
 // Firebase Setup
+import jFirebase from "https://cdn.skypack.dev/jlsfirebase/es8.mjs";
 const jConf = {
 	apiKey: "AIzaSyCJUZeFgz86pbcJSyAg01le-Ll5TATFWbQ",
 	authDomain: "messaging-3e144.firebaseapp.com",
@@ -9,7 +10,7 @@ const jConf = {
 	appId: "1:1067401953961:web:cca14542d6e7697df19fb8",
 	measurementId: "G-JFW1T0KYQ8"
 };
-require(['https://cdn.skypack.dev/jlsfirebase'], function (jFirebase) {
+
     var init = jFirebase.init(jConf);
 	//Login
 	function addUser() {
@@ -28,6 +29,6 @@ require(['https://cdn.skypack.dev/jlsfirebase'], function (jFirebase) {
 		localStorage.setItem("user", userName);
 		window.location = "index.html";
 	}
+
 }
-});
 
